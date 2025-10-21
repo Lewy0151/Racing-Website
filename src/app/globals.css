@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Use a dark background and smooth text rendering */
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Prevent horizontal scrollbars on mobile */
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make images responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Custom link styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* customize scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 4px;
+}
+
+/* Optional utility classes (example) */
+.section {
+  @apply px-6 py-10;
 }
