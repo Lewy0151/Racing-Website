@@ -50,7 +50,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE MENU — animated dropdown */}
+      {/* MOBILE MENU animated dropdown */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           open ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
