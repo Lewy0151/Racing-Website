@@ -1,44 +1,67 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  return (
-    <nav className="fixed top-0 left-0 w-full bg-black border-b border-gray-800 z-50">
-      <div className="flex items-center justify-between px-4 py-3">
-        {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="Behind the Saddle" width={40} height={40} />
-          <span className="font-bold text-lg">Behind the Saddle</span>
-        </Link>
+  const toggleMenu = () => setOpen(!open);
 
-        {/* Mobile Menu Button */}
+  return (
+    <nav className="fixed top-0 left-0 w-full border-b border-[#fb9292] shadow-lg shadow-[#e0a6a6] z-50 text-[#fa5555]">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+
+        {/* MOBILE: animated hamburger */}
         <button
-          className="text-white md:hidden"
-          onClick={() => setOpen(!open)}
+          className="md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
         >
-          ☰
+          <span
+            className={`block h-0.5 w-full bg-black transition-transform duration-300 ${
+              open ? "rotate-45 translate-y-2" : ""
+            }`}
+          ></span>
+          <span
+            className={`block h-0.5 w-full bg-black transition-opacity duration-300 ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
+          ></span>
+          <span
+            className={`block h-0.5 w-full bg-black transition-transform duration-300 ${
+              open ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          ></span>
         </button>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex space-x-6">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+        {/* SITE NAME */}
+        <Link
+          href="/"
+          className="text-lg font-semibold tracking-wide uppercase md:text-xl text-[#fa5555] "
+        >
+          Behind the Saddle
+        </Link>
+
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex space-x-8 text-sm text-[#fa5555] font-medium">
+          <Link href="/" className="hover:text-gray-600 transition">Home</Link>
+          <Link href="/about" className="hover:text-gray-600 transition">About</Link>
+          <Link href="/contact" className="hover:text-gray-600 transition">Contact</Link>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden bg-black border-t border-gray-800 flex flex-col items-center space-y-4 py-4">
+      {/* MOBILE MENU animated dropdown */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          open ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="flex flex-col bg-[#fcbebe] border-t border-[#fb9292] px-4 py-3 space-y-2">
           <Link href="/" onClick={() => setOpen(false)}>Home</Link>
           <Link href="/about" onClick={() => setOpen(false)}>About</Link>
           <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
