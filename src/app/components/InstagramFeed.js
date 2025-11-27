@@ -3,8 +3,9 @@
 import { useEffect } from "react";
 
 export default function InstagramFeed() {
+  const instagramUrl = "https://www.instagram.com/behindthesaddle_/";
+
   useEffect(() => {
-    // Load LightWidget script dynamically
     const script = document.createElement("script");
     script.src = "https://cdn.lightwidget.com/widgets/lightwidget.js";
     script.async = true;
@@ -16,7 +17,17 @@ export default function InstagramFeed() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center my-12">
+    <div className="w-full flex flex-col items-center my-12 px-4">
+
+      <a
+        href={instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-6 bg-[#fa5555] hover:bg-[#fb9292] transition-all shadow-md text-white px-6 py-3 rounded-full text-lg border border-[#fb9292]"
+      >
+        Follow us on Instagram
+      </a>
+
       {/* Responsive LightWidget iframe */}
       <div className="w-full max-w-[1024px]">
         <iframe

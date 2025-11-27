@@ -1,15 +1,15 @@
 import Image from "next/image";
-import Hero from "./components/Hero";
+import LatestYoutube from "./components/LatestYoutube";
 import InstagramFeed from "./components/InstagramFeed";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-[#fcbebe] text-black">
+    <>
+      <main className="flex flex-col items-center justify-center min-h-screen bg-[#fcbebe] text-black">
 
-      {/* Content container */}
-      <div className="flex flex-col items-center px-4 pt-10 flex-grow">
         {/* Logo Section */}
-        <section className="flex flex-col items-center text-center">
+        <section className="mt-10 flex flex-col items-center text-center px-4">
           <Image
             src="/Behind The Saddle.png"
             alt="Behind the Saddle logo"
@@ -17,26 +17,21 @@ export default function Home() {
             height={400}
             className="w-64 sm:w-80 md:w-[400px] h-auto object-contain"
           />
-          <h1 className="mt-4 text-3xl font-semibold tracking-wide">
-            Behind the Saddle
-          </h1>
         </section>
 
-        {/* Optional Hero Section */}
-        {/* {Hero && (
-          <section className="w-full mt-12">
-            <Hero />
-          </section>
-        )} */}
-      </div>
+        {/* Latest YouTube Video */}
+        <section className="w-full mt-10">
+          <LatestYoutube />
+        </section>
 
-      {/* Instagram Feed Section */}
-      <section className="w-full mt-12 mb-12">
-        <h2 className="text-2xl font-bold text-center mb-6">
-          Follow us on Instagram
-        </h2>
-        <InstagramFeed />
-      </section>
-    </main>
+        {/* Instagram Feed */}
+        <section className="w-full mt-12">
+          <InstagramFeed />
+        </section>
+      </main>
+
+      {/* Footer (separate so it stays dark + clean) */}
+      <Footer />
+    </>
   );
 }
