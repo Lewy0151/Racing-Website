@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Behind the Saddle – Official Website
 
-## Getting Started
+This is the official website for Behind the Saddle, showcasing horse racing and equestrian content through YouTube highlights, Instagram updates, and behind-the-scenes insights.
+Built with Next.js, Tailwind CSS, and deployed on Vercel with a custom domain.
 
-First, run the development server:
+🚀 Live Website
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 https://behindthesaddle.com
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+📸 Features
+✔️ Responsive YouTube Video Embed
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Automatically displays the latest Behind the Saddle YouTube video using the official YouTube embed.
 
-## Learn More
+✔️ Instagram Feed (LightWidget)
 
-To learn more about Next.js, take a look at the following resources:
+Fully responsive Instagram feed using a widget from LightWidget.
+The feed updates automatically and works on HTTPS.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✔️ Fully Mobile-Responsive Layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Designed using Tailwind CSS with mobile-first styling.
 
-## Deploy on Vercel
+✔️ Custom Domain Connected via Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Domain: behindthesaddle.com
+DNS hosted via GoDaddy → connected to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+✔️ Deployed on Vercel
+
+Automatic deployments from GitHub on every push.
+
+
+
+🔧 Tech Stack
+
+Next.js 14 (App Router)
+
+React
+
+Tailwind CSS
+
+LightWidget (Instagram Feed)
+
+Vercel Hosting
+
+GoDaddy Domain
