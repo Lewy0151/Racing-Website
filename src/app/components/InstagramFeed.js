@@ -23,7 +23,7 @@ export default function InstagramFeed() {
         href={instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mb-6 bg-[#fa5555] hover:bg-[#fb9292] transition-all shadow-md text-white px-6 py-3 rounded-full text-lg border border-[#fb9292]"
+        className="mb-6 bg-[#fa5555] hover:bg-[#fb9292] transition-all shadow-md text-white px-6 py-3 rounded-full text-lg heading-font tracking-widest uppercase border border-[#fb9292]"
       >
         Follow us on Instagram
       </a>
