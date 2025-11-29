@@ -26,6 +26,15 @@ export default function Footer() {
           >
             YouTube
           </a>
+
+          <a
+            href="https://open.spotify.com/show/4wSYuUDXMOMAS7qE4N8iV1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block hover:text-[#fa5555] transition hover:underline underline-offset-4 decoration-[#fa5555]"
+          >
+            Spotify
+          </a>
         </div>
 
         {/* Navigation */}

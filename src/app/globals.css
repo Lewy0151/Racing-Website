@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
 /* GLOBAL BASE STYLES */
@@ -6,7 +9,7 @@ body {
   scroll-behavior: smooth;
   background-color: #fcbebe;
   color: #111111;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -41,11 +44,16 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ccc;
+  background-color: #fa5555;
   border-radius: 4px;
 }
 
 /* HR / BORDERS */
 hr {
-  border-color: #000;
+  border-color: #fa5555;
+}
+
+/* HEADING FONT CLASS */
+.heading-font {
+  font-family: 'Anton', sans-serif;
 }

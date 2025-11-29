@@ -6,18 +6,40 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col items-center justify-center min-h-screen bg-[#fcbebe] text-black">
+      <main className="flex flex-col items-center justify-start min-h-screen bg-[#fcbebe] text-black">
 
         {/* Logo Section */}
-        <section className="mt-10 flex flex-col items-center text-center px-4">
+        <section className="flex flex-col items-center text-center px-4 mt-4 w-full">
           <Image
             src="/Behind The Saddle.png"
             alt="Behind the Saddle logo"
-            width={400}
-            height={400}
-            className="w-64 sm:w-80 md:w-[400px] h-auto object-contain"
+            width={450}
+            height={450}
+            className="w-72 sm:w-96 md:w-[450px] h-auto object-contain"
           />
+
+          {/* Sponsored Container */}
+          <a
+            href="https://www.instagram.com/thefondecoffee/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mb-6 bg-[#fa5555] hover:bg-[#fb9292] transition-all shadow-md 
+        text-white px-6 py-3 rounded-full text-lg heading-font tracking-widest uppercase 
+        border border-[#fb9292]"
+          >
+            Sponsored by Fonde
+          </a>
+
+          {/* Tagline Text */}
+          <p className="text-base font-bold text-[#fa5555] max-w-md">
+            Behind the Saddle brings you horse racing and equestrian content, insights, and behind-the-scenes stories.
+          </p>
         </section>
+
+        {/* Horizontal line */}
+        <div className="w-full mt-20 mb-10">
+          <hr className="border-t-8 border-[#fa5555] w-full" />
+        </div>
 
         {/* Latest YouTube Video */}
         <section className="w-full mt-10">
@@ -30,7 +52,6 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer (separate so it stays dark + clean) */}
       <Footer />
     </>
   );
