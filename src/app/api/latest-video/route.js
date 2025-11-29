@@ -1,5 +1,5 @@
 export async function GET() {
-  const channelId = "UC6RPyQagWAcHpOM89ZHQk8g"; // Your channel ID
+  const channelId = "UC6RPyQagWAcHpOM89ZHQk8g";
 
   try {
     const rssResponse = await fetch(
@@ -8,7 +8,6 @@ export async function GET() {
 
     const xml = await rssResponse.text();
 
-    // Extract <yt:videoId>...</yt:videoId>
     const match = xml.match(/<yt:videoId>(.*?)<\/yt:videoId>/);
 
     const videoId = match ? match[1] : null;
