@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
         {/* Sticky Navbar */}
         <Navbar />
 
-        {/* Add padding so content doesn't hide under navbar */}
         <main className="pt-28 md:pt-32">
           {children}
         </main>

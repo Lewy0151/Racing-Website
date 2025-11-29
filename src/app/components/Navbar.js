@@ -1,15 +1,14 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // To detect current route
+import { usePathname } from "next/navigation"; 
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname(); // Get current route
+  const pathname = usePathname(); 
 
   const toggleMenu = () => setOpen(!open);
 
-  // Helper to check if a link is active
   const isActive = (path) => pathname === path;
 
   return (

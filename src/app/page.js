@@ -36,7 +36,7 @@ export default function Home() {
           </p>
         </section>
 
-        {/* Horizontal line */}
+        {/* Horizontal Line */}
         <div className="w-full mt-20 mb-10">
           <hr className="border-t-8 border-[#fa5555] w-full" />
         </div>
