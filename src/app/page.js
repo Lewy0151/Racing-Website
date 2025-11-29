@@ -28,7 +28,7 @@ export default function Home() {
               text-white px-6 py-3 rounded-full text-lg heading-font tracking-widest uppercase 
               border border-[#fb9292]"
           >
-            Sponsored by Fonde
+            Sponsored by Fonde Coffee
           </a>
 
           {/* Tagline Text */}
