@@ -11,7 +11,7 @@ export default function Home() {
         {/* Logo Section */}
         <section className="flex flex-col items-center text-center px-4 mt-4 w-full">
           <Image
-            src="/Behind The Saddle.png"
+            src="/BTS.png"
             alt="Behind the Saddle logo"
             width={450}
             height={450}
