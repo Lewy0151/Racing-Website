@@ -21,14 +21,14 @@ export default function Home() {
 
           {/* Sponsored Container */}
           <a
-            href="https://www.instagram.com/thefondecoffee/"
+            href="https://maccridingclub.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="mb-6 bg-[#fa5555] hover:bg-[#fb9292] transition-all shadow-md 
               text-white px-6 py-3 rounded-full text-lg heading-font tracking-widest uppercase 
               border border-[#fb9292]"
           >
-            Sponsored by Fonde Coffee
+            Sponsored by Macclesfield" & "District Riding Club
           </a>
 
           {/* Tagline Text */}
